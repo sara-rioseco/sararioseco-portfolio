@@ -1,0 +1,41 @@
+
+.Presentation
+  padding: 0 4rem
+  font-weight: 400
+  border: 1px solid tomato
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 2rem
+  align-items: center
+  justify-items: flex-end
+
+  > div
+
+    > h2
+      font-size: 34px
+      font-weight: 400
+      border: 1px solid lightskyblue
+      margin-top: 1rem
+
+    > p
+      font-size: 20px
+      font-weight: 400
+      border: 1px solid lightpink
+      text-wrap: pretty
+
+    > .Image
+      object-fit: cover
+      border-radius: 1rem
+      box-shadow: 0 0 2rem rgba(255, 255, 255, 0.4)
+
+  &__imageContainer
+    position: relative
+    @media (min-width: 200px)
+      width: 150px
+      height: 200px
+    @media (min-width: 425px)
+      width: 300px
+      height: 400px
+    @media (min-width: 768px)
+      width: 450px
+      height: 600px

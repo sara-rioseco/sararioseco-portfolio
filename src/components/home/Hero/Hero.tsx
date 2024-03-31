@@ -1,7 +1,16 @@
+import styles from './Hero.module.sass';
+
 export const Hero = () => {
+  console.log("I'm I runnign on the client?");
   return (
-    <section>
-      <h1>My super hero section</h1>
+    <section className={styles.Hero}>
+      <p className={styles.Subtitle}>
+        Crafting code with passion and continuously evolving in the world of
+        programming.
+      </p>
+      <h1 className={styles.Title}>
+        Hey there! I&apos;m a full stack web developer based in Santiago, Chile.
+      </h1>
     </section>
   );
 };

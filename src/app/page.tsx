@@ -1,13 +1,16 @@
 import Image from 'next/image';
 import { Hero } from 'app/components/home/Hero';
 import { Presentation } from 'app/components/home/Presentation';
+import { Carousel } from 'app/components/home/Carousel';
+import { Experience } from 'app/components/home/Experience';
 
 export default function Home() {
   return (
     <main>
-      <h1>Hola mundo!</h1>
       <Hero />
       <Presentation />
+      <Carousel />
+      <Experience />
     </main>
   );
 }

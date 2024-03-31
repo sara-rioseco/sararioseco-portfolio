@@ -1,25 +1,26 @@
 import Link from 'next/link';
+import styles from './Header.module.sass';
 
 export const Header = () => {
   return (
-    <header>
-      <nav>
-        <h1>SaraRioseco</h1>
-        <ul>
+    <header className={styles.Header}>
+      <nav className={styles.Nav}>
+        <h1 className={styles.Title}>SaraRioseco</h1>
+        <ul className={styles.List}>
           <Link href='/'>
-            <li>HOME</li>
+            <li className={styles.ListItem}>HOME</li>
           </Link>
           <Link href='/resume'>
-            <li>RESUME</li>
+            <li className={styles.ListItem}>RESUME</li>
           </Link>
           <Link href='/about'>
-            <li>ABOUT ME</li>
+            <li className={styles.ListItem}>ABOUT ME</li>
           </Link>
           <Link href='/projects'>
-            <li>PROJECTS</li>
+            <li className={styles.ListItem}>PROJECTS</li>
           </Link>
           <Link href='/contact'>
-            <li>CONTACT ME</li>
+            <li className={styles.ListItem}>CONTACT ME</li>
           </Link>
         </ul>
       </nav>
