@@ -5,7 +5,12 @@ export const Header = () => {
   return (
     <header className={styles.Header}>
       <nav className={styles.Nav}>
-        <h1 className={styles.Title}>SaraRioseco</h1>
+        <Link
+          href='/'
+          className={styles.Title}
+        >
+          <h1>SaraRioseco</h1>
+        </Link>
         <ul className={styles.List}>
           <Link href='/'>
             <li className={styles.ListItem}>HOME</li>
