@@ -6,6 +6,11 @@
   100%
     opacity: 0.8
 
+@keyframes appearFromRight
+  100%
+    translate: none
+    opacity: 1
+
 .Presentation
   max-width: 1200px
   font-weight: 400
@@ -35,7 +40,14 @@
       object-fit: cover
       border-radius: 1rem
       box-shadow: 0 0 2rem rgba(255, 255, 255, 0.4)
-      animation: fade-in 3s ease-in-out infinite
+      translate: 300px
+      opacity: 0
+      animation: appearFromRight ease-in-out forwards
+
+      @supports (animation-timeline: view())
+        animation-timeline: view()
+        animation-range-start: 10vh
+        animation-range-end: 100vh
 
   &__imageContainer
     position: relative
