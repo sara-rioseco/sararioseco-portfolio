@@ -1,0 +1,70 @@
+.Contact
+  padding-inline: calc((100vw - 580px) / 2)
+  padding-block: 6rem
+  margin: 0 auto
+  display: grid
+  gap: 2rem
+  justify-content: flex-end
+  background: #eee
+  color: #000
+  z-index: 0
+
+  h2
+    font-size: 34px
+    font-weight: 400
+
+  p
+    font-size: 20px
+    font-weight: 400
+    text-wrap: pretty balance
+    color: #969aac
+
+  form
+    justify-self: center
+    display: grid
+    width: 100%
+    grid-template-columns: 1fr 1fr
+    gap: 2em
+
+    *
+      grid-column: span 1
+
+    :nth-child(3)
+      grid-column: span 2
+
+    > button
+      height: 2.5rem
+      width: fit-content
+      padding: .5rem 1.5rem
+      text-transform: uppercase
+      letter-spacing: .1rem
+      font-size: 12px
+      font-family: Montserrat
+      border: none
+      background: #333
+      color: #ddd
+      transition: all 500ms ease-in-out
+      &:hover
+        background: #666
+        color: #eee
+
+  fieldset
+    border: none
+    display: grid
+
+    > label
+      height: 2rem
+      text-transform: uppercase
+      letter-spacing: .1rem
+      font-size: 12px
+
+    > input, textarea
+      font-family: Montserrat, system-ui, sans-serif
+      height: 2.5rem
+      padding: .5rem 1rem
+      background: #fff
+      color: #000
+      border: 1px solid #969aac
+
+    > textarea
+      height: 8rem
