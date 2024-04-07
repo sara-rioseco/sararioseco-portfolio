@@ -14,25 +14,27 @@ export const ContactForm = () => {
       </p>
       <form action=''>
         <fieldset>
-          <label htmlFor='name'>Name</label>
+          <label htmlFor='form-name'>Name</label>
           <input
             type='text'
             name='name'
             id='form-name'
             placeholder='Enter your name'
+            autoComplete='on'
           />
         </fieldset>
         <fieldset>
-          <label htmlFor='email'>Email Address</label>
+          <label htmlFor='form-email'>Email Address</label>
           <input
             type='email'
             name='email'
             id='form-email'
             placeholder='Enter your email'
+            autoComplete='on'
           />
         </fieldset>
         <fieldset>
-          <label htmlFor='message'>Message</label>
+          <label htmlFor='form-message'>Message</label>
           <textarea
             name='message'
             id='form-message'

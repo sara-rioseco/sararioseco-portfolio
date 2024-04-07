@@ -1,6 +1,6 @@
 .Contact
   padding-inline: calc((100vw - 580px) / 2)
-  padding-block: 6rem
+  padding-block: 6.6rem
   margin: 0 auto
   display: grid
   gap: 2rem
@@ -64,7 +64,12 @@
       padding: .5rem 1rem
       background: #fff
       color: #000
-      border: 1px solid #969aac
+      border: 1px solid #969aaccb
+      transition: border 500ms ease-in-out
+      &:focus-visible, &:focus, &:hover
+        outline: none
+        border: 1px solid #000
 
     > textarea
       height: 8rem
+      padding: .7rem 1rem

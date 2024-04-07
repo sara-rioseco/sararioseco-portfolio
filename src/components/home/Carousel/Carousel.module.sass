@@ -1,19 +1,25 @@
 .Carousel
-  margin: 4rem 10rem
-  padding: 10rem 10rem
+  max-width: 1200px
   font-weight: 400
+  margin: 0 auto
+  padding: 1rem 2rem
   border: 1px solid tomato
+  display: grid
+  grid-template-columns: 1fr auto
+  gap: 2rem
+  align-items: center
+  justify-items: flex-end
 
-.Title
-  background-image: $gradient
-  background-clip: text
-  -webkit-text-fill-color: transparent
-  font-size: 54px
-  font-weight: 400
-  border: 1px solid lightskyblue
+  > h2
+    font-size: 34px
+    font-weight: 400
+    border: 1px solid lightskyblue
+    margin-top: 1rem
+    color: #969aac
 
-.Subtitle
-  color: #808080
-  font-size: 20px
-  font-weight: 400
-  border: 1px solid lightpink
+  > p
+    font-size: 20px
+    font-weight: 400
+    border: 1px solid lightpink
+    text-wrap: pretty balance
+    color: #808080
