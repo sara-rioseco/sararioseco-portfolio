@@ -24,16 +24,34 @@
 //     text-wrap: pretty balance
 //     color: #808080
 
+@keyframes slide
+  0%
+    transform: translateY(0)
+  10%
+    transform: translateY(-60px)
+  20%
+    transform: translateY(-120px)
+  30%
+    transform: translateY(-180px)
+  40%
+    transform: translateY(-240px)
+  50%
+    transform: translateY(-300px)
+  60%
+    transform: translateY(-360px)
+  70%
+    transform: translateY(-420px)
+  80%
+    transform: translateY(-480px)
+  90%
+    transform: translateY(-540px)
+
 .Carousel
-  // display: flex
-  // justify-content: center
-  // align-items: center
   height: 300px
   max-width: 1200px
   font-weight: 400
   margin: 2rem auto
   padding: 1rem 2rem
-  border: 1px solid tomato
   display: grid
   grid-template-columns: auto
   gap: 2rem
@@ -52,87 +70,32 @@
     align-content: center
     position: absolute
     overflow: hidden
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%,rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)
+    background: -webkit-linear-gradient(0deg, #8d7d7d 0%, rgba(0,0,0,0) 45%,rgba(0,0,0,0) 55%, rgba(0,0,0,1) 100%)
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%)
 
   &__container p
     font-size: 50px
-    margin: 50px 0
-    color: #808080
-    // position: relative
-    vertical-align: middle
+    color: #808080a8
+    user-select: none
+    vertical-align: top
 
   &__content
-    width: fit-content
-    // position: relative
+    width: 270px
+    height: 300px
+    z-index: -1
 
     & li
       font-size: 50px
+      width: fit-content
       opacity: 1
       color: #969aac
       list-style: none
-  .Carousel__active
-    border: 1px solid green
-
-  &__active li
-    margin-left: 150px
-    position: absolute
-    opacity: 0
-    transition: 1s
-
-li.prevprev_text
-  top: -50px
-  opacity: 0.2
-
-li.prev_text
-  top: 0
-  opacity: 0.5
-  transition: 1s
-
-li.current_text
-  top: 50px
-  opacity: 1
-  transition: 1s
-
-li.next_text
-  top: 100px
-  opacity: 0.5
-  transition: 1s
-
-li.nextnext_text
-  top: 150px
-  opacity: 0.2
+      position: absolute
+      opacity: 1
+      user-select: none
+      animation: slide 10s ease-in-out infinite
 
 @media (min-width: 992px)
   .Carousel
     max-width: 1200px
-    height: 600px
-
-    &__container
-      height: 600px
-
-    & p
-      font-size: 100px
-      margin: 100px 0
-
-    &__content
-      width: fit-content
-
-      & li
-        font-size: 100px
-
-    &_active li
-      margin-left: 300px
-
-    &.prevprev_text
-      top: -100px
-
-    &.prev_text
-      top: 0
-
-    &.current_text
-      top: 100px
-
-    &.next_text
-      top: 200px
-
-    &.nextnext_text
-      top: 300px

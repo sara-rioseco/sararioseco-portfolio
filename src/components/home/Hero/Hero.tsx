@@ -1,7 +1,6 @@
 import styles from './Hero.module.sass';
 
 export const Hero = () => {
-  console.log("I'm I runnign on the client?");
   return (
     <section className={styles.Hero}>
       <p className={styles.Subtitle}>
