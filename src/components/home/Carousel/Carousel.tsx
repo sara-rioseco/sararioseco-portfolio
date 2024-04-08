@@ -13,7 +13,7 @@ export const Carousel = () => {
     'MySQL',
     'MongoDB',
     'Firebase',
-    '& More...',
+    'so much more',
   ];
 
   const liHeight = 60;
