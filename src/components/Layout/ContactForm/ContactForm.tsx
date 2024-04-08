@@ -1,4 +1,5 @@
 import styles from './ContactForm.module.sass';
+import { Button } from 'app/components/globals/Button/Button';
 
 export const ContactForm = () => {
   return (
@@ -43,7 +44,12 @@ export const ContactForm = () => {
             rows={10}
           ></textarea>
         </fieldset>
-        <button type='submit'>Submit</button>
+        <Button
+          params={{
+            type: 'submit',
+            label: 'Submit',
+          }}
+        />
       </form>
     </section>
   );

@@ -1,25 +1,138 @@
+// .Carousel
+//   max-width: 1200px
+//   font-weight: 400
+//   margin: 0 auto
+//   padding: 1rem 2rem
+//   border: 1px solid tomato
+//   display: grid
+//   grid-template-columns: 1fr auto
+//   gap: 2rem
+//   align-items: center
+//   justify-items: flex-end
+
+//   > h2
+//     font-size: 34px
+//     font-weight: 400
+//     border: 1px solid lightskyblue
+//     margin-top: 1rem
+//     color: #969aac
+
+//   > p
+//     font-size: 20px
+//     font-weight: 400
+//     border: 1px solid lightpink
+//     text-wrap: pretty balance
+//     color: #808080
+
 .Carousel
+  // display: flex
+  // justify-content: center
+  // align-items: center
+  height: 300px
   max-width: 1200px
   font-weight: 400
-  margin: 0 auto
+  margin: 2rem auto
   padding: 1rem 2rem
   border: 1px solid tomato
   display: grid
-  grid-template-columns: 1fr auto
+  grid-template-columns: auto
   gap: 2rem
   align-items: center
-  justify-items: flex-end
+  justify-items: center
+  position: relative
 
-  > h2
-    font-size: 34px
-    font-weight: 400
-    border: 1px solid lightskyblue
-    margin-top: 1rem
-    color: #969aac
+  &__container
+    height: 300px
+    width: fit-content
+    display: grid
+    grid-template-columns: auto 1fr
+    gap: 2rem
+    padding-block: 60px
+    align-items: center
+    align-content: center
+    position: absolute
+    overflow: hidden
 
-  > p
-    font-size: 20px
-    font-weight: 400
-    border: 1px solid lightpink
-    text-wrap: pretty balance
+  &__container p
+    font-size: 50px
+    margin: 50px 0
     color: #808080
+    // position: relative
+    vertical-align: middle
+
+  &__content
+    width: fit-content
+    // position: relative
+
+    & li
+      font-size: 50px
+      opacity: 1
+      color: #969aac
+      list-style: none
+  .Carousel__active
+    border: 1px solid green
+
+  &__active li
+    margin-left: 150px
+    position: absolute
+    opacity: 0
+    transition: 1s
+
+li.prevprev_text
+  top: -50px
+  opacity: 0.2
+
+li.prev_text
+  top: 0
+  opacity: 0.5
+  transition: 1s
+
+li.current_text
+  top: 50px
+  opacity: 1
+  transition: 1s
+
+li.next_text
+  top: 100px
+  opacity: 0.5
+  transition: 1s
+
+li.nextnext_text
+  top: 150px
+  opacity: 0.2
+
+@media (min-width: 992px)
+  .Carousel
+    max-width: 1200px
+    height: 600px
+
+    &__container
+      height: 600px
+
+    & p
+      font-size: 100px
+      margin: 100px 0
+
+    &__content
+      width: fit-content
+
+      & li
+        font-size: 100px
+
+    &_active li
+      margin-left: 300px
+
+    &.prevprev_text
+      top: -100px
+
+    &.prev_text
+      top: 0
+
+    &.current_text
+      top: 100px
+
+    &.next_text
+      top: 200px
+
+    &.nextnext_text
+      top: 300px
