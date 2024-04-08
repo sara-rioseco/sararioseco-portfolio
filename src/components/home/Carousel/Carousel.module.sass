@@ -1,8 +1,10 @@
 @keyframes slide
   0%
     transform: translateY(0)
+    opacity: 0
   10%
     transform: translateY(-60px)
+    opacity: 1
   20%
     transform: translateY(-120px)
   30%
@@ -19,8 +21,12 @@
     transform: translateY(-480px)
   90%
     transform: translateY(-540px)
-  100%
+    opacity: 1
+  99%
     transform: translateY(-600px)
+    opacity: 0
+  100%
+    transform: translateY(60px)
 
 .Carousel
   height: 300px
@@ -51,6 +57,7 @@
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%)
 
   &__container p
+    margin-left: 8rem
     font-size: 50px
     color: #808080a8
     user-select: none
@@ -60,15 +67,13 @@
     width: 380px
     height: 300px
     z-index: -1
-    border: 1px solid tomato
 
     & li
       font-size: 50px
       width: fit-content
-      opacity: 1
+      opacity: 0
       color: #969aac
       list-style: none
       position: absolute
-      opacity: 1
       user-select: none
-      animation: slide 12s ease-in-out infinite
+      animation: slide 14s ease-in-out infinite
