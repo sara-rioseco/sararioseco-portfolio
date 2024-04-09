@@ -7,8 +7,9 @@ export const ContactEmail = () => {
       <p>If you like what you see and want to work together, get in touch!</p>
       <h2>
         <a
-          target='_top'
           href='mailto:sara.rioseco@gmail.com'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           sara.rioseco@gmail.com
         </a>
