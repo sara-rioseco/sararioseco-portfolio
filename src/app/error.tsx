@@ -2,8 +2,11 @@
 import styles from 'app/sass/error.module.sass';
 import { ErrorPageProps } from './lib/definitions';
 import { Button } from 'app/components/globals/Button/Button';
+import { useRouter } from 'next/navigation';
 
 export default function Error({ reset }: ErrorPageProps) {
+  const router = useRouter();
+
   return (
     <main>
       <section className={styles.Error}>
@@ -12,13 +15,22 @@ export default function Error({ reset }: ErrorPageProps) {
           But don&apos;t worry, everything is fine.
         </p>
         <br />
-        <Button
-          params={{
-            type: 'submit',
-            label: 'Try again',
-            handleClick: reset,
-          }}
-        />
+        <div className={styles.Buttons}>
+          <Button
+            params={{
+              type: 'submit',
+              label: 'Try again',
+              handleClick: reset,
+            }}
+          />
+          <Button
+            params={{
+              type: 'button',
+              label: 'Go back',
+              handleClick: router.back,
+            }}
+          />
+        </div>
       </section>
     </main>
   );

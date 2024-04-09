@@ -1,7 +1,8 @@
 {
   "projects": [
     {
-      "name": "Top Secret",
+      "id": 1,
+      "name": "top-secret",
       "role": "UX Design and Frontend Developer",
       "description": "Application to apply Cesar Encryption to a message. It receives two inputs from the user, a message and an offset number. It has two options: encode and decode.",
       "url": "https://sara-rioseco.github.io/top-secret/",
@@ -15,13 +16,15 @@
         "GitHub Pages",
         "Jest"
       ],
-      "img-desktop": "https://raw.githubusercontent.com/sara-rioseco/top-secret/main/src/assets/img/final-design-desktop.webp",
-      "img-mobile": "https://raw.githubusercontent.com/sara-rioseco/top-secret/main/src/assets/img/final-design-mobile.webp",
+      "keywords": [],
+      "imgdesktop": "https://raw.githubusercontent.com/sara-rioseco/top-secret/main/src/assets/img/final-design-desktop.webp",
+      "imgmobile": "https://raw.githubusercontent.com/sara-rioseco/top-secret/main/src/assets/img/final-design-mobile.webp",
       "video": null,
       "date": "April 2023"
     },
     {
-      "name": "Pokedex Database",
+      "id": 2,
+      "name": "pokedex-database",
       "role": "UX Design and Frontend Developer",
       "description": "Web application to view, sort, filter and search information about the 251 Pokemon of the first and second generation of Pokemon.",
       "url": "https://sara-rioseco.github.io/pokedex-database/",
@@ -37,12 +40,14 @@
         "Chart.js",
         "Jest"
       ],
-      "img-desktop": "https://raw.githubusercontent.com/sara-rioseco/pokedex-database/main/src/assets/img/project/final-desktop.jpg",
-      "img-mobile": "https://raw.githubusercontent.com/sara-rioseco/pokedex-database/main/src/assets/img/project/final-mobile.jpg",
+      "keywords": [],
+      "imgdesktop": "https://raw.githubusercontent.com/sara-rioseco/pokedex-database/main/src/assets/img/project/final-desktop.jpg",
+      "imgmobile": "https://raw.githubusercontent.com/sara-rioseco/pokedex-database/main/src/assets/img/project/final-mobile.jpg",
       "date": "April 2023"
     },
     {
-      "name": "Pets' Diaries",
+      "id": 3,
+      "name": "pets-diaries",
       "role": "UX Design and Frontend Developer",
       "description": "Application with a social network format that allows registration with Google or email, authentication, publishing text, and liking publications.",
       "url": "https://pets--diaries.web.app/",
@@ -57,12 +62,14 @@
         "Firestore",
         "Jest"
       ],
-      "img-desktop": null,
-      "img-mobile": null,
+      "keywords": [],
+      "imgdesktop": null,
+      "imgmobile": null,
       "date": "June 2023"
     },
     {
-      "name": "MD Links",
+      "id": 4,
+      "name": "md-links",
       "role": "Backend Developer",
       "description": "NPM package that can be used as a library or as a CLI module to obtain all the links within any Markdown file found recursively in a specific path in your file system. Optionally, you can validate the state of each link.",
       "url": "https://www.npmjs.com/package/@sara-rioseco/md-links",
@@ -76,12 +83,14 @@
         "Chalk",
         "Jest"
       ],
-      "img-desktop": null,
-      "img-mobile": null,
+      "keywords": [],
+      "imgdesktop": null,
+      "imgmobile": null,
       "date": "July 2023"
     },
     {
-      "name": "Burger Queen API Client",
+      "id": 5,
+      "name": "burger-queen-api-client",
       "role": "Frontend Developer",
       "description": "Interface that allows you to manage users, products and orders of a restaurant. For this, an API that stores, receives and sends information is consumed, interacting with a database.",
       "url": "https://bq-api-client.vercel.app/",
@@ -94,12 +103,14 @@
         "Vercel",
         "Jest"
       ],
-      "img-desktop": null,
-      "img-mobile": null,
+      "keywords": [],
+      "imgdesktop": null,
+      "imgmobile": null,
       "date": "August 2023"
     },
     {
-      "name": "Burger Queen API",
+      "id": 6,
+      "name": "burger-queen-api",
       "role": "Backend Developer",
       "description": "API created to manage users, products and orders of a restaurant. It connects to a MongoDB database and a Node server. Additionally, it can be used with Docker by building both services in a multi-container.",
       "url": "https://bq-api.vercel.app/",
@@ -114,12 +125,14 @@
         "Vercel",
         "Jest"
       ],
-      "img-desktop": null,
-      "img-mobile": null,
+      "keywords": [],
+      "imgdesktop": null,
+      "imgmobile": null,
       "date": "September 2023"
     },
     {
-      "name": "My ToDo List",
+      "id": 7,
+      "name": "my-todo-list",
       "role": "UX Design and Frontend Developer",
       "description": "Mobile App designed to sign up, store, modify and delete to do lists.",
       "url": null,
@@ -131,12 +144,14 @@
         "Firestore",
         "Jest"
       ],
-      "img-desktop": null,
-      "img-mobile": null,
+      "keywords": [],
+      "imgdesktop": null,
+      "imgmobile": null,
       "date": "December 2023"
     },
     {
-      "name": "NovaWallet",
+      "id": 8,
+      "name": "novawallet",
       "role": "UX Design, Fullstack Developer",
       "description": "An e-wallet interface that allows the user to manage, transfer and deposit money in a convenient and easy way.",
       "url": "sara-rioseco.github.io/nova-wallet/",
@@ -152,8 +167,9 @@
         "Babel",
         "Jest"
       ],
-      "img-desktop": null,
-      "img-mobile": null,
+      "keywords": [],
+      "imgdesktop": null,
+      "imgmobile": null,
       "date": "February 2024"
     }
   ]

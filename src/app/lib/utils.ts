@@ -9,8 +9,10 @@ export default function utils() {
 
   const cap = (s: string): string => s.charAt(0).toUpperCase() + s.slice(1);
 
+  const removeHyphens = (s: string): string => s.replace('-', ' ');
+
   const isEmailValid = (e: string) =>
     /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(e);
 
-  return { toTitleCase, cap, isEmailValid };
+  return { toTitleCase, cap, removeHyphens, isEmailValid };
 }

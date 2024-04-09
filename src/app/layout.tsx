@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: 'Sara Rioseco',
   description:
     "Sara Rioseco's web development portfolio created with Next.js and Vercel",
+  keywords: ["portfolio", "development", "web", "developer", "typescript", "nextjs", "vercel"]
 };
 
 export default function RootLayout({

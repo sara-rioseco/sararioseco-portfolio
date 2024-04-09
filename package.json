@@ -2,6 +2,23 @@
   "name": "sararioseco-portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "Sara Rioseco's web development portfolio created with Next.js and Vercel",
+  "author": {
+    "name": "Sara Rioseco",
+    "email": "sara.rioseco@gmail.com",
+    "url": "https://github.com/sara-rioseco/"
+  },
+  "keywords": [
+    "portfolio",
+    "development",
+    "web",
+    "developer",
+    "typescript",
+    "nextjs",
+    "vercel"
+  ],
+  "homepage": "",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,3 +41,4 @@
     "typescript": "^5"
   }
 }
+
