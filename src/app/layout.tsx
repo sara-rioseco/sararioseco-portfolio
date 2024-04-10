@@ -11,10 +11,26 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Sara Rioseco',
+  metadataBase: new URL('http://localhost:3000'),
+  title: { default: 'Sara Rioseco', template: `%s | Sara Rioseco` },
   description:
     "Sara Rioseco's web development portfolio created with Next.js and Vercel",
-  keywords: ["portfolio", "development", "web", "developer", "typescript", "nextjs", "vercel"]
+  keywords: [
+    'portfolio',
+    'development',
+    'web',
+    'developer',
+    'typescript',
+    'nextjs',
+    'vercel',
+  ],
+  openGraph: {
+    description:
+      "Sara Rioseco's web development portfolio created with Next.js and Vercel",
+    images: [
+      'https://srioseco-portfolio.s3.us-east-2.amazonaws.com/img/icon-180x180.webp',
+    ],
+  },
 };
 
 export default function RootLayout({
