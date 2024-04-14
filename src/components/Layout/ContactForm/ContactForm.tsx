@@ -1,7 +1,31 @@
+'use client';
 import styles from './ContactForm.module.sass';
 import { Button } from 'app/components/globals/Button/Button';
+import { Modal } from 'app/components/globals/Modal';
+import { handleContactSubmit } from 'app/actions';
+import { ModalProps } from 'app/app/lib/definitions';
 
 export const ContactForm = () => {
+  console.log('variable de entorno', process.env.MAILGUN_DOMAIN);
+
+  let modal = document.getElementById('modal-dialog') as HTMLDialogElement;
+  const handleSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    try {
+      const res = await handleContactSubmit(formData);
+      if (res?.status !== 200) {
+        console.log('Message failed');
+      } else {
+        console.log('Message sent successfully');
+      }
+      modal?.showModal();
+    } catch (e) {
+      console.error('error', e);
+    }
+  };
+
   return (
     <section className={styles.Contact}>
       <h2>
@@ -13,7 +37,10 @@ export const ContactForm = () => {
         Whether you want to reach me for a job offer or a specifically
         commissioned work, don&apos;t hesitate, I&apos;m right here for you.
       </p>
-      <form action=''>
+      <form
+        action=''
+        onSubmit={handleSubmit}
+      >
         <fieldset>
           <label htmlFor='form-name'>Name</label>
           <input
@@ -51,6 +78,13 @@ export const ContactForm = () => {
           }}
         />
       </form>
+      <Modal
+        params={{
+          title: 'Message sent successfully',
+          message: "I'll be getting in contact with you soon.",
+          handleModalClick: () => modal.close(),
+        }}
+      />
     </section>
   );
 };

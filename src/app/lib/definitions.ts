@@ -12,7 +12,23 @@ export interface ButtonProps {
   };
 }
 
+export interface ModalProps {
+  params: {
+    title: string;
+    message: string;
+    handleModalClick?: () => void;
+  };
+}
+
 export interface ErrorPageProps {
   error: Error;
   reset: () => void;
+}
+
+export interface FormData {
+  FormData: [
+    { name: string; value: string },
+    { name: string; value: string },
+    { name: string; value: string }
+  ];
 }
