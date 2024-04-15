@@ -1,11 +1,12 @@
 import utils from '../../lib/utils';
 import Image from 'next/image';
-import { ProjectProps } from '../../lib/definitions';
+import { ProjectsProps } from '../../lib/definitions';
 import { getProjects, getProjectByName } from 'app/app/services/data';
 
 const { toTitleCase, removeHyphens } = utils();
 
-export async function generateMetadata(props: ProjectProps) {
+export async function generateMetadata(props: ProjectsProps) {
+  console.log('props here', props);
   const { project } = props.params;
   const item = await getProjectByName(project);
   if (!item) throw new Error('Project not found');
@@ -20,15 +21,15 @@ export async function generateMetadata(props: ProjectProps) {
   };
 }
 
-export default async function Project(props: ProjectProps) {
+export default async function Project(props: ProjectsProps) {
   const { project } = props.params;
   const item = await getProjectByName(project);
-  console.log(item);
+  console.log(item, 'item here');
   if (!item) throw new Error('Project not found');
 
   return (
     <main>
-      <h1>{toTitleCase(project)}</h1>
+      <h1>{toTitleCase(item?.name)}</h1>
       <h3>{item?.role}</h3>
       <p>{item?.description}</p>
       <Image

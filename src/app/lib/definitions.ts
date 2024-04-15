@@ -1,6 +1,21 @@
+export interface ProjectsProps {
+  params: { project: string };
+  searchParams?: {};
+}
 export interface ProjectProps {
   params: {
-    project: string;
+    id: number;
+    name: string;
+    role: string;
+    description: string;
+    url: string;
+    repository: string;
+    technologies: string[];
+    keywords: string[] | never[];
+    imgdesktop: string;
+    imgmobile: string;
+    video: string | null;
+    date: string;
   };
 }
 

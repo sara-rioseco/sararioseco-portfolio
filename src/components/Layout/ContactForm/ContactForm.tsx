@@ -4,11 +4,18 @@ import { Button } from 'app/components/globals/Button/Button';
 import { Modal } from 'app/components/globals/Modal';
 import { handleContactSubmit } from 'app/actions';
 import { ModalProps } from 'app/app/lib/definitions';
+import { useState } from 'react';
 
 export const ContactForm = () => {
-  console.log('variable de entorno', process.env.MAILGUN_DOMAIN);
+  const [mailSent, setMailSent] = useState(false);
+  let modal: HTMLDialogElement;
+  let form: HTMLFormElement;
 
-  let modal = document.getElementById('modal-dialog') as HTMLDialogElement;
+  if (typeof window !== 'undefined') {
+    modal = document.getElementById('modal-dialog') as HTMLDialogElement;
+    form = document.getElementById('contact-form') as HTMLFormElement;
+  }
+
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
 
@@ -16,14 +23,15 @@ export const ContactForm = () => {
     try {
       const res = await handleContactSubmit(formData);
       if (res?.status !== 200) {
-        console.log('Message failed');
+        setMailSent(false);
       } else {
-        console.log('Message sent successfully');
+        setMailSent(true);
       }
       modal?.showModal();
     } catch (e) {
       console.error('error', e);
     }
+    form.reset();
   };
 
   return (
@@ -38,6 +46,7 @@ export const ContactForm = () => {
         commissioned work, don&apos;t hesitate, I&apos;m right here for you.
       </p>
       <form
+        id='contact-form'
         action=''
         onSubmit={handleSubmit}
       >
@@ -80,8 +89,10 @@ export const ContactForm = () => {
       </form>
       <Modal
         params={{
-          title: 'Message sent successfully',
-          message: "I'll be getting in contact with you soon.",
+          title: mailSent ? 'Message sent successfully' : 'Message failed',
+          message: mailSent
+            ? "I'll be getting in contact with you soon."
+            : 'There was an unexpected error. Please try again later.',
           handleModalClick: () => modal.close(),
         }}
       />

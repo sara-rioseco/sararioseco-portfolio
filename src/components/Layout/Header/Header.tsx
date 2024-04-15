@@ -2,8 +2,6 @@ import Link from 'next/link';
 import styles from './Header.module.sass';
 
 export const Header = () => {
-  console.log("I'm a header");
-
   return (
     <header className={styles.Header}>
       <nav className={styles.Nav}>

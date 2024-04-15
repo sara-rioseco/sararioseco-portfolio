@@ -1,17 +1,43 @@
+@keyframes fade-in-slide-up
+  0%
+    opacity: 0
+    transform: translateY(100%)
+
+  100%
+    opacity: 1
+    transform: translateY(0%)
+
+// @keyframes fade-out-slide-down
+//   0%
+//     opacity: 1
+//     transform: translateY(0%)
+//   100%
+//     opacity: 0
+//     transform: translateY(100%)
+
 .Modal
-  margin: auto !important
+  margin: auto
   padding: 1.5rem 2rem 1rem 2rem
+  // display: block
   border: none
   background-color: #fff
   text-align: center
   box-shadow: 0 0 8px 2px #888888ff
+  // animation: fade-out-slide-down 500ms forwards
 
   &:focus-visible
     outline: none
 
+  &[open]
+    animation: fade-in-slide-up 500ms forwards
+
   &[open]::backdrop
     background: rgba(36, 36, 36, 0.2)
     backdrop-filter: blur(4px)
+
+  &:not([open])
+    pointer-events: none
+    opacity: 0
 
   .Title
     font-size: 20px

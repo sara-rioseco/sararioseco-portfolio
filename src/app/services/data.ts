@@ -1,3 +1,5 @@
+import { ProjectProps } from '../lib/definitions';
+
 export const getProjects = async () => {
   try {
     const res = await import('../lib/data.json');
@@ -17,11 +19,12 @@ export const getProjectById = async (id: number) => {
   }
 };
 export const getProjectByName = async (name: string) => {
+  console.log('name here', name);
   try {
     const res = await getProjects();
-    const project = res.find(
-      project => project.name.toLowerCase() === name.toLowerCase()
-    );
+    const project = res.find(p => p.name.toLowerCase() === name.toLowerCase());
+    console.log('name here', name);
+    console.log('project here', project);
     return project;
   } catch (err) {
     throw err;

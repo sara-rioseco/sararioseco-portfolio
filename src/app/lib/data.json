@@ -16,7 +16,7 @@
         "GitHub Pages",
         "Jest"
       ],
-      "keywords": [],
+      "keywords": ["caesar-encryption", "vanilla-javascript"],
       "imgdesktop": "https://raw.githubusercontent.com/sara-rioseco/top-secret/main/src/assets/img/final-design-desktop.webp",
       "imgmobile": "https://raw.githubusercontent.com/sara-rioseco/top-secret/main/src/assets/img/final-design-mobile.webp",
       "video": null,
@@ -43,6 +43,7 @@
       "keywords": [],
       "imgdesktop": "https://raw.githubusercontent.com/sara-rioseco/pokedex-database/main/src/assets/img/project/final-desktop.jpg",
       "imgmobile": "https://raw.githubusercontent.com/sara-rioseco/pokedex-database/main/src/assets/img/project/final-mobile.jpg",
+      "video": null,
       "date": "April 2023"
     },
     {
@@ -63,8 +64,9 @@
         "Jest"
       ],
       "keywords": [],
-      "imgdesktop": null,
-      "imgmobile": null,
+      "imgdesktop": "",
+      "imgmobile": "",
+      "video": null,
       "date": "June 2023"
     },
     {
@@ -84,8 +86,9 @@
         "Jest"
       ],
       "keywords": [],
-      "imgdesktop": null,
-      "imgmobile": null,
+      "imgdesktop": "",
+      "imgmobile": "",
+      "video": null,
       "date": "July 2023"
     },
     {
@@ -104,8 +107,9 @@
         "Jest"
       ],
       "keywords": [],
-      "imgdesktop": null,
-      "imgmobile": null,
+      "imgdesktop": "",
+      "imgmobile": "",
+      "video": null,
       "date": "August 2023"
     },
     {
@@ -126,8 +130,9 @@
         "Jest"
       ],
       "keywords": [],
-      "imgdesktop": null,
-      "imgmobile": null,
+      "imgdesktop": "",
+      "imgmobile": "",
+      "video": null,
       "date": "September 2023"
     },
     {
@@ -135,7 +140,7 @@
       "name": "my-todo-list",
       "role": "UX Design and Frontend Developer",
       "description": "Mobile App designed to sign up, store, modify and delete to do lists.",
-      "url": null,
+      "url": "",
       "repository": "https://github.com/sara-rioseco/MyFirstReactNativeApp",
       "technologies": [
         "Javascript",
@@ -145,8 +150,9 @@
         "Jest"
       ],
       "keywords": [],
-      "imgdesktop": null,
-      "imgmobile": null,
+      "imgdesktop": "",
+      "imgmobile": "",
+      "video": null,
       "date": "December 2023"
     },
     {
@@ -168,8 +174,9 @@
         "Jest"
       ],
       "keywords": [],
-      "imgdesktop": null,
-      "imgmobile": null,
+      "imgdesktop": "",
+      "imgmobile": "",
+      "video": null,
       "date": "February 2024"
     }
   ]
