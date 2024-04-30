@@ -9,7 +9,10 @@ export const ProjectCard = (props: ProjectProps) => {
   const { removeHyphens, toTitleCase } = utils();
 
   return (
-    <Link href={`/projects/${name}`}>
+    <Link
+      href={`/projects/${name}`}
+      // className={props.class}
+    >
       <li
         className={styles.ProjectCard}
         style={{ backgroundImage: `url(${imgdesktop})` }}

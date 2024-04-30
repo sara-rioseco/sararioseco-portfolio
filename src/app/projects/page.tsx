@@ -2,7 +2,8 @@ import styles from 'app/sass/projects.module.sass';
 import { ContactEmail } from 'app/components/layout/ContactEmail';
 import { getProjects } from '../services/data';
 import { ProjectCard } from 'app/components/globals/ProjectCard';
-import { ProjectProps } from '../lib/definitions';
+import { ProjectProps, ProjectsList } from '../lib/definitions';
+import { Bento } from 'app/components/projects/Bento';
 
 export async function generateMetadata() {
   return {
@@ -31,10 +32,7 @@ export default async function Projects() {
 
   return (
     <main>
-      <h1 className={styles.Title}>Take a look at my most recent projects</h1>
-      <p className={styles.Text}>
-        You can click on each one to see more details
-      </p>
+      {/* <Bento projects={projects}/> */}
       <ul className={styles.List}>
         {projects
           .sort((a, b) => b.id - a.id)

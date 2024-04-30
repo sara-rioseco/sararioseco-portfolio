@@ -17,6 +17,24 @@ export interface ProjectProps {
     video: string | null;
     date: string;
   };
+  class?: string;
+}
+
+export interface ProjectsList {
+  projects: {
+    id: number;
+    name: string;
+    role: string;
+    description: string;
+    url: string;
+    repository: string;
+    technologies: string[];
+    keywords: string[];
+    imgdesktop: string;
+    imgmobile: string;
+    video: null;
+    date: string;
+  }[];
 }
 
 export interface ButtonProps {
