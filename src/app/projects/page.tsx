@@ -32,8 +32,8 @@ export default async function Projects() {
 
   return (
     <main>
-      {/* <Bento projects={projects}/> */}
-      <ul className={styles.List}>
+      <Bento projects={projects} />
+      {/* <ul className={styles.List}>
         {projects
           .sort((a, b) => b.id - a.id)
           .map(project => {
@@ -44,7 +44,7 @@ export default async function Projects() {
               />
             );
           })}
-      </ul>
+      </ul> */}
       <ContactEmail />
     </main>
   );

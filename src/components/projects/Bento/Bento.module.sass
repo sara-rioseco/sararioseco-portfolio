@@ -7,6 +7,7 @@
   justify-content: flex-start
   align-items: center
   margin-inline: auto
+  background-color: #121212
 
 .Title
   font-size: 34px
@@ -39,6 +40,20 @@
   // outline: 1px solid tomato
   border-radius: 0.4em
   list-style-type: none
+  // ::after
+  //   outline: 1px solid lightblue
+  //   position: absolute
+  //   z-index: -1
+  //   content: ""
+  //   inset: -1px
+  //   border-radius: inherit
+  //   background: rgb(219,219,219)
+  //   background: -moz-linear-gradient(135deg, rgba(219,219,219,1) 0%, rgba(18,18,18,1) 50%, rgba(219,219,219,1) 100%)
+  //   background: -webkit-linear-gradient(135deg, rgba(219,219,219,1) 0%, rgba(18,18,18,1) 50%, rgba(219,219,219,1) 100%)
+  //   background: linear-gradient(135deg, rgba(219,219,219,1) 0%, rgba(18,18,18,1) 50%, rgba(219,219,219,1) 100%)
+  //   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbdbdb",endColorstr="#dbdbdb",GradientType=1)
+  //   transform: scale(1.1)
+    // filter: blur(25px) brightness(1.8)
   &:first-child
     grid-column: 1 / span 3
     grid-row: 1 / span 4
@@ -63,3 +78,17 @@
   &:nth-child(8)
     grid-column: 7 / span 3
     grid-row: 4 / span 3
+  // >*::after
+  //   width: 100%
+  //   position: absolute
+  //   z-index: -10
+  //   content: ""
+  //   inset: -1px
+  //   border-radius: inherit
+  //   background: rgb(219,219,219)
+  //   background: -moz-linear-gradient(135deg, rgba(219,219,219,1) 0%, rgba(18,18,18,1) 50%, rgba(219,219,219,1) 100%)
+  //   background: -webkit-linear-gradient(135deg, rgba(219,219,219,1) 0%, rgba(18,18,18,1) 50%, rgba(219,219,219,1) 100%)
+  //   background: linear-gradient(135deg, rgba(219,219,219,1) 0%, rgba(18,18,18,1) 50%, rgba(219,219,219,1) 100%)
+  //   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dbdbdb",endColorstr="#dbdbdb",GradientType=1)
+  //   translate: 0 15%
+  //   filter: blur(25px) brightness(1.8)

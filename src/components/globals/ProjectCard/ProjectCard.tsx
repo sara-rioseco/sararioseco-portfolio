@@ -11,7 +11,7 @@ export const ProjectCard = (props: ProjectProps) => {
   return (
     <Link
       href={`/projects/${name}`}
-      // className={props.class}
+      className={props.class}
     >
       <li
         className={styles.ProjectCard}
